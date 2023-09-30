@@ -1,6 +1,6 @@
 str = input("Введите произвольную строку со скобками:")
 x = str.count("(")
-y = str.count("(")
+y = str.count(")")
 if x > y:
     print("Не хватает", (x - y), "закрывающих скобок")
 elif x < y:
