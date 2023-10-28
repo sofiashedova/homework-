@@ -1,11 +1,7 @@
-f1 = f2 = 1
-f_sum = f1 + f2
-n = int(input("Номер элемента"))
-i = 0
-while i < n - 2:
-    f_sum = f1 + f2
-    f2 = f_sum
-    i = i + 1
-print(f2)
-
+def fib(n):
+    f = [0, 1, 1]
+    for _ in range(n - 2):
+        f.append(f[-2] + f[-1])
+        return f[:n]
+print(fib(int(input())))
 
