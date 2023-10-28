@@ -1,3 +1,4 @@
-numbers = [3, 2, 15, 7, 42, 5, 21]
-middle = sum(numbers) / len(numbers)
-print(middle)
+def f(n):
+    return sum(n)/len(n)
+lst = [int(n) for n in input().split()]
+print(f(lst))
