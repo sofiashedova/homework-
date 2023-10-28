@@ -1,7 +1,7 @@
-def fib(n):
-    f = [0, 1, 1]
-    for _ in range(n - 2):
-        f.append(f[-2] + f[-1])
+def f(n):
+    f = [0, 1]
+    for _ in range(2, n):
+        f.append(f[-1] + f[-2])
         return f[:n]
-print(fib(int(input())))
+print(f(int(input())))
 
