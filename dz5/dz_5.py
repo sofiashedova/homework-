@@ -1,9 +1,9 @@
-def poisk( lst,n):
+def poisk(lst, n):
     low = 0 
     high = len(lst) - 1
     result = None 
     while low <= high:
-        mid = (low +  high) // 2
+        mid = (low + high) // 2
         if lst[mid] == n:
            result = mid
            high = mid - 1
