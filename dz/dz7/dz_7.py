@@ -1,16 +1,19 @@
 from collections import deque
 
-def bfs(g, s, t):
+def check(node, t):
+    return node == t
+
+
+def bfs(g, s, t, check):
     a = deque([(s, 0)])
     b = set([s])
 
     while a:
         node, distance = a.popleft()
-        if node == t:
+        if check(node, t):
             return distance
         for neighbor in g.get(node, []):
             if neighbor not in b:
                 a.append((neighbor, distance + 1))
-                b.add(neighbor)
 
     return None
