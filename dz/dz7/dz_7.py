@@ -15,5 +15,6 @@ def bfs(g, s, t, check):
         for neighbor in g.get(node, []):
             if neighbor not in b:
                 a.append((neighbor, distance + 1))
+                b.add(neighbor)
 
     return None
