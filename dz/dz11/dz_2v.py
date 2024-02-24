@@ -12,6 +12,8 @@ class Date:
         self.year = year
         self.month = month
         self.day = day
+        if not self.validate():
+            raise ValueError ("Invalid date")
 
     def __str__(self):
         return f"{self.year}.{self.month}.{self.day}"
@@ -27,7 +29,7 @@ class Date:
             if (self.year % 4 == 0 and self.year % 100 != 0) or (self.year % 400 == 0):
                 maxday = 29
             else:
-                maxday = 29
+                maxday = 28
         if self.day > maxday:
             return False 
         return True
