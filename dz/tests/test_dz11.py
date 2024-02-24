@@ -9,7 +9,7 @@ class TestDate:
     @pytest.mark.parametrize("year, month, day, expected", [
         (2022, 12, 31, True),  # Valid date
         (2023, 2, 29, False),   # Invalid date
-        # Добавьте другие тестовые случаи здесь
+        
     ])
     def test_validate(self, year, month, day, expected):
         date = Date(year, month, day)
@@ -18,7 +18,7 @@ class TestDate:
     @pytest.mark.parametrize("year, month, day", [
         (2022, 12, 31),
         (2023, 2, 28),
-        # Добавьте другие тестовые случаи здесь
+        
     ])
     def test_str(self, year, month, day):
         date = Date(year, month, day)
@@ -27,7 +27,7 @@ class TestDate:
     @pytest.mark.parametrize("year, month, day", [
         (2022, 12, 31),
         (2023, 2, 28),
-        # Добавьте другие тестовые случаи здесь
+        
     ])
     def test_input_date(self, year, month, day):
         date = Date()
